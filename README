@@ -1,6 +1,6 @@
 ABOUT
 =====
-UITabBarController is nice, and it's used in lots and lots of apps, unfortunately it doesn't do really when it comes to supporting some UIViewControllers that support both landscape and portrait and some UIViewControllers that only support portrait mode. 
+UITabBarController is nice, and it's used in lots and lots of apps, unfortunately it doesn't do really well when it comes to supporting some UIViewControllers that support both landscape and portrait and some UIViewControllers that only support portrait mode. 
 
 UITabBarController Cons:
 -Only supports rotation if all the UIViewControllers return YES from shouldAutorotateToInterfaceOrientation:
