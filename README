@@ -1,0 +1,35 @@
+ABOUT
+=====
+UITabBarController is nice, and it's used in lots and lots of apps, unfortunately it doesn't do really when it comes to supporting some UIViewControllers that support both landscape and portrait and some UIViewControllers that only support portrait mode. 
+
+UITabBarController Cons:
+-Only supports rotation if all the UIViewControllers return YES from shouldAutorotateToInterfaceOrientation:
+-Doesn't shrink or move out of the way in landscape mode so it takes up a ton of area.
+
+Similar to string theory, BAGTabBarController solves these problems by hiding the UITabBar in landscape mode and showing it again when the phone is rotated back to portrait.
+
+USEAGE
+======
+
+Before using this controller you must tell the device to start generating device orientation notifications.
+Commonly one would use the following code in the application delegate
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application {    
+	
+	//Start Orientation Notifications
+	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+	
+	...
+}
+
+Then when the application closes you should tell the device to stop notifications.
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+	
+	//End Orientation Notifications
+	[[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
+	...
+}
+
+Other than that just use BAGTabBarController where you would use UITabBarController.
+
