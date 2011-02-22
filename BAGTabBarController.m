@@ -1,5 +1,5 @@
 /** 
- * PlusMinusCell.m
+ * BAGTabBarController.m
  * Copyright (c) 2009, Benjamin Guest. 
  * All rights reserved.
  *
