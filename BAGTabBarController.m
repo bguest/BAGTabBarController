@@ -38,6 +38,7 @@
 	// Return YES for supported orientations
 	return [self.selectedViewController shouldAutorotateToInterfaceOrientation:theOrientation];;
 }
+
 /**
  * Sets tab bar to show/hide
  */
@@ -46,8 +47,7 @@
 	if ([self.view.subviews count] <2)
 		return;
 	
-	UIView *contentView;
-	
+	UIView* contentView;
 	if ([[self.view.subviews objectAtIndex:0] isKindOfClass:[UITabBar class]])
 		contentView = [self.view.subviews objectAtIndex:1];
 	else 
@@ -62,7 +62,7 @@
 		newFrame.size.height -= tabbarHeight;
 		contentView.frame = newFrame;
 	}
-	self.tabBar.hidden = hide;
+	self.tabBar.hidden = hide;	
 }
 
 -(void)deviceDidRotate{
